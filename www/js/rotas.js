@@ -38,6 +38,7 @@ angular.module('starter').config(function($stateProvider,$urlRouterProvider){
 		}
 	})
 
+
 	.state('menu.jornada1',{
 		url:'/jornada1',
 		views:{
@@ -64,6 +65,15 @@ angular.module('starter').config(function($stateProvider,$urlRouterProvider){
 			'menuConteudo': {
 				templateUrl: 'templates/rotas.html',
 				controller: 'AppRotas'
+			}
+		}
+	})
+
+	.state('menu.listaRota',{
+		url: '/listaRota',
+		views:{
+			'menuConteudo':{
+				templateUrl: 'templates/listaRota.html'
 			}
 		}
 	})
