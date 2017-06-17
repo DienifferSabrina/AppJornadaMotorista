@@ -5,7 +5,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	 var retornoConsulta = consultaExpedicaoLocal();
 
-	  	 if (retornoConsulta == true){
+	  	 if (retornoConsulta == false){
 	  	 	swal({
 		 		  title: "Deseja Iniciar Expedição?",
 		 		  showCancelButton: true,
@@ -24,36 +24,36 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 				    swal("Expedição Cancelada");
 				  };
 				});
-	  	}else{
-				swal({
-		 		  title: "Deseja Encerrar a Expedição?",
-		 		  showCancelButton: true,
-		 		  confirmButtonColor: "#DD6B55",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
-		 		  closeOnConfirm: false,
-		 		  closeOnCancel: false
-		 		},
-		 		function(isConfirm){
-		 		  if (isConfirm) {
-				  		var retorno = HttpService.finalizaExpedicaoLocal();
-						if(retorno == true)
-				    swal("Expedição finalizada com Sucesso!");
-				  };
-				});
-			};
+	  	}
 	  };
 
+		//finalizar expedicao
+		$scope.finalizaExpedicaoLocal = function(){
+			var retornoConsulta = consultaExpedicaoLocal();
+			console.log(retornoConsulta);
+			if (retornoConsulta.length == 1){
+			swal({
+				title: "Deseja Encerrar a Expedição?",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Yes",
+				cancelButtonText: "No",
+				closeOnConfirm: false,
+				closeOnCancel: false
+			},
+			function(isConfirm){
+				if (isConfirm) {
+						var retorno = HttpService.finalizaExpedicaoLocal();
+					if(retorno == true)
+					swal("Expedição finalizada com Sucesso!");
+				};
+			});
+		}
+	}
 	  // consulta do inicio da expedição
 	  var consultaExpedicaoLocal = function(){
-    	var expedicao = HttpService.getExpedicaoLocal();
+    return HttpService.getExpedicaoLocal();
 
-    	if  (expedicao == false){
-   			return true;
-    	}
-    	else{
-    		return false;
-    	};
  	};
 
  	// inicio direção
