@@ -13,14 +13,15 @@
        <input type="text" placeholder="Endereço de destino" ng-model="rota.txtDestino">
        </label>
 
-    <button class="button button-block" ng-click="CalculaDistancia()"> 
-        Calcula Distância 
-      </button>
 
+      <button class="button button-positive" ng-click="CalculaDistancia()"> 
+          Calcular Distância e Salvar Rota
+      </button>
 
         <div><span id="litResultado">&nbsp;</span></div>
         <div style="padding: 10px 0 0; clear: both">
             <iframe width="750" scrolling="no" height="350" frameborder="0" id="map" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?saddr="></iframe>
         </div>
+
       </ion-content>
 </ion-view>

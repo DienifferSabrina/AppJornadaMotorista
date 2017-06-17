@@ -5,6 +5,31 @@
 angular.module('starter').service('HttpService', function($http){
 return{
 
+  InseriMapaLocal: function(novo){
+
+    // guarda os mapas
+    var mapas = [ ];
+
+    // verifica se a chave existe
+    if (typeof localStorage.mapas != 'undefined'){
+      // recupera o conteudo da chave e transforma em json
+      mapas = JSON.parse(localStorage.mapas);
+    }
+     // adiciona uma nova rota
+     mapas.push(novo);
+     // converte JSON para String
+      var paraString = JSON.stringify(mapas);
+      // armazena conteúdo do vetor em localStorate
+      localStorage.setItem('mapas', paraString);
+      
+      return true;
+
+  },
+
+   getMapasLocal: function() {
+     // retorna conteúdo da chave 
+     return JSON.parse(localStorage.mapas);
+   },
 
 
   inseriExpedicaoLocal: function() { 
