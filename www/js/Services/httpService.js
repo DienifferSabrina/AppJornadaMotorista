@@ -21,25 +21,25 @@ return{
       var paraString = JSON.stringify(mapas);
       // armazena conteúdo do vetor em localStorate
       localStorage.setItem('mapas', paraString);
-      
+
       return true;
 
   },
 
    getMapasLocal: function() {
-     // retorna conteúdo da chave 
+     // retorna conteúdo da chave
      return JSON.parse(localStorage.mapas);
    },
 
 
-  inseriExpedicaoLocal: function() { 
+  inseriExpedicaoLocal: function() {
 
     var Expedicao = new Date();
     var data = Expedicao.getDate() + "/" + Expedicao.getMonth() + "/" + Expedicao.getFullYear() ;
     var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes();
 
      novo = {
-      data:data, hora:hora
+      dataInicio:data, horaInicio:hora
     };
 
       // guarda os produtos
@@ -55,17 +55,48 @@ return{
       var paraString = JSON.stringify(expedicao);
       // armazena conteúdo do vetor em localStorate
       localStorage.setItem('expedicao', paraString);
-      
+
       return true;
-   
+
+   },
+
+   finalizaExpedicaoLocal: function(){
+     var Expedicao = new Date();
+     var data = Expedicao.getDate() + "/" + Expedicao.getMonth() + "/" + Expedicao.getFullYear() ;
+     var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes();
+
+      novo = {
+       dataFinal:data, horaFinal:hora
+     };
+
+       // guarda os produtos
+       var expedicao = [ ];
+       // verifica se a chave existe
+       if (typeof localStorage.expedicao != 'undefined'){
+           // recupera conteúdo da chave e transforma em JSON
+           expedicao = JSON.parse(localStorage.expedicao);
+       }
+       // adiciona produto novo no vetor
+      expedicao.push(novo);
+      // converte JSON para String
+       var paraString = JSON.stringify(expedicao);
+       // armazena conteúdo do vetor em localStorate
+       localStorage.setItem('expedicao', paraString);
+
+       return true;
+
+
    },
 
     getExpedicaoLocal: function() {
-     // retorna conteúdo da chave 
+     // retorna conteúdo da chave
+     if(typeof localStorage.expedicao == 'undefined')
+       return false;
+     else
      return JSON.parse(localStorage.expedicao);
    },
 
-   inseriInicioDirecaoLocal: function() { 
+   inseriInicioDirecaoLocal: function() {
 
     var InicioDirecao = new Date();
     var data = InicioDirecao.getDate() + "/" + InicioDirecao.getMonth() + "/" + InicioDirecao.getFullYear() ;
@@ -88,18 +119,18 @@ return{
       var paraString = JSON.stringify(InicioDirecao);
       // armazena conteúdo do vetor em localStorate
       localStorage.setItem('InicioDirecao', paraString);
-      
+
       return true;
-   
+
    },
 
     getInicioDirecaoLocal: function() {
-     // retorna conteúdo da chave 
+     // retorna conteúdo da chave
      return JSON.parse(localStorage.InicioDirecao);
    },
 
    // inicio fiscalização
-    inseriInicioFiscalizacaoLocal: function() { 
+    inseriInicioFiscalizacaoLocal: function() {
 
     var InicioFiscalizacao = new Date();
     var data = InicioFiscalizacao.getDate() + "/" + InicioFiscalizacao.getMonth() + "/" + InicioFiscalizacao.getFullYear() ;
@@ -122,19 +153,19 @@ return{
       var paraString = JSON.stringify(InicioFiscalizacao);
       // armazena conteúdo do vetor em localStorate
       localStorage.setItem('InicioFiscalizacao', paraString);
-      
+
       return true;
-   
+
    },
 
    // consulta fiscalização
     getInicioFiscalizacaoLocal: function() {
-     // retorna conteúdo da chave 
+     // retorna conteúdo da chave
      return JSON.parse(localStorage.InicioFiscalizacao);
    },
 
-   // 
-   inseriInicioAbastecimentoLocal: function() { 
+   //
+   inseriInicioAbastecimentoLocal: function() {
 
     var InicioAbastacimento = new Date();
     var data = InicioAbastacimento.getDate() + "/" + InicioAbastacimento.getMonth() + "/" + InicioAbastacimento.getFullYear() ;
@@ -157,13 +188,13 @@ return{
       var paraString = JSON.stringify(InicioAbastacimento);
       // armazena conteúdo do vetor em localStorate
       localStorage.setItem('InicioAbastacimento', paraString);
-      
+
       return true;
-   
+
    },
 
     getInicioAbastecimentoLocal: function() {
-     // retorna conteúdo da chave 
+     // retorna conteúdo da chave
      return JSON.parse(localStorage.InicioAbastacimento);
    },
 
