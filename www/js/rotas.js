@@ -73,7 +73,8 @@ angular.module('starter').config(function($stateProvider,$urlRouterProvider){
 		url: '/listaRota',
 		views:{
 			'menuConteudo':{
-				templateUrl: 'templates/listaRota.html'
+				templateUrl: 'templates/listaRota.html',
+				controller: 'AppRotas'
 			}
 		}
 	})

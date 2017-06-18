@@ -1,7 +1,16 @@
-<ion-view>
+<ion-view ng-init="consultaRota()">
       <ion-nav-title>
         <h1 class="title"> Minhas Rotas </h1> <!-- titulo barra superior -->
       </ion-nav-title>
       <!-- Botão para chamar a tela  -->
-    
+      <ion-content>
+      	<ion-list>
+          <ion-item ng-repeat="rota in rotas">
+            <li> Origem: {{rota.origem}} </li>
+            <li> Destino: {{rota.destino}} </li>
+            <li> Duração: {{rota.duracao}} </li>
+            <li> Tempo: {{rota.tempo}} </li>    
+          </ion-item>
+        </ion-list>
+      </ion-content>  
 </ion-view>

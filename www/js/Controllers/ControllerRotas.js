@@ -80,8 +80,13 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
                       swal("Rota Cancelada");
                     };
                   });
-                }
-            }
+                };
+              };
 
-         
+            // consulta mapas
+          var consultaRota = function(){
+          return HttpService.getMapasLocal();
+          };
+
+   
 });
