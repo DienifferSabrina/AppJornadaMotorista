@@ -8,19 +8,19 @@ return{
   InseriMapaLocal: function(novo){
 
     // guarda os mapas
-    var mapas = [ ];
+    var rota = [ ];
 
     // verifica se a chave existe
-    if (typeof localStorage.mapas != 'undefined'){
+    if (typeof localStorage.rota != 'undefined'){
       // recupera o conteudo da chave e transforma em json
-      mapas = JSON.parse(localStorage.mapas);
+      rota = JSON.parse(localStorage.rota);
     }
      // adiciona uma nova rota
-     mapas.push(novo);
+     rota.push(novo);
      // converte JSON para String
-      var paraString = JSON.stringify(mapas);
+      var paraString = JSON.stringify(rota);
       // armazena conteúdo do vetor em localStorate
-      localStorage.setItem('mapas', paraString);
+      localStorage.setItem('rota', paraString);
 
       return true;
 
@@ -28,7 +28,7 @@ return{
 
    getMapasLocal: function() {
      // retorna conteúdo da chave
-     return JSON.parse(localStorage.mapas);
+     return JSON.parse(localStorage.rota);
    },
 
 
@@ -36,7 +36,7 @@ return{
 
     var Expedicao = new Date();
     var data = Expedicao.getDate() + "/" + Expedicao.getMonth() + "/" + Expedicao.getFullYear() ;
-    var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes();
+    var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes() + ":" + Expedicao.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
@@ -63,7 +63,7 @@ return{
    finalizaExpedicaoLocal: function(){
      var Expedicao = new Date();
      var data = Expedicao.getDate() + "/" + Expedicao.getMonth() + "/" + Expedicao.getFullYear() ;
-     var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes();
+     var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes() + ":" + Expedicao.getSeconds();
 
       novo = {
        dataFinal:data, horaFinal:hora
@@ -103,7 +103,7 @@ return{
    inseriDirecaoLocal: function(){
      var Direcao = new Date();
      var data = Direcao.getDate() + "/" + Direcao.getMonth() + "/" + Direcao.getFullYear() ;
-     var hora = Direcao.getHours() + ":" + Direcao.getMinutes();
+     var hora = Direcao.getHours() + ":" + Direcao.getMinutes() + ":" + Direcao.getSeconds();
 
       novo = {
         dataInicio:data, horaInicio:hora
@@ -131,7 +131,7 @@ return{
    finalizaDirecaoLocal: function(){
      var Direcao = new Date();
      var data = Direcao.getDate() + "/" + Direcao.getMonth() + "/" + Direcao.getFullYear() ;
-     var hora = Direcao.getHours() + ":" + Direcao.getMinutes();
+     var hora = Direcao.getHours() + ":" + Direcao.getMinutes()+ ":" + Direcao.getSeconds();
 
       novo = {
          dataFinal:data, horaFinal:hora
@@ -171,7 +171,7 @@ return{
    inseriFiscalizacaoLocal: function(){
      var Fiscalizacao = new Date();
      var data = Fiscalizacao.getDate() + "/" + Fiscalizacao.getMonth() + "/" + Fiscalizacao.getFullYear() ;
-     var hora = Fiscalizacao.getHours() + ":" + Fiscalizacao.getMinutes();
+     var hora = Fiscalizacao.getHours() + ":" + Fiscalizacao.getMinutes() + ":" + Fiscalizacao.getSeconds();
 
       novo = {
         dataInicio:data, horaInicio:hora
@@ -199,7 +199,7 @@ return{
    finalizaFiscalizacaoLocal: function(){
     var Fiscalizacao = new Date();
      var data = Fiscalizacao.getDate() + "/" + Fiscalizacao.getMonth() + "/" + Fiscalizacao.getFullYear() ;
-     var hora = Fiscalizacao.getHours() + ":" + Fiscalizacao.getMinutes();
+     var hora = Fiscalizacao.getHours() + ":" + Fiscalizacao.getMinutes() + ":" + Fiscalizacao.getSeconds();
 
 
       novo = {
@@ -239,7 +239,7 @@ return{
    inseriAbastecimentoLocal: function(){
      var Abastecimento = new Date();
      var data = Abastecimento.getDate() + "/" + Abastecimento.getMonth() + "/" + Abastecimento.getFullYear() ;
-     var hora = Abastecimento.getHours() + ":" + Abastecimento.getMinutes();
+     var hora = Abastecimento.getHours() + ":" + Abastecimento.getMinutes() + ":" + Abastecimento.getSeconds();
 
       novo = {
         dataInicio:data, horaInicio:hora
@@ -267,7 +267,7 @@ return{
    finalizaAbastecimentoLocal: function(){
      var Abastecimento = new Date();
      var data = Abastecimento.getDate() + "/" + Abastecimento.getMonth() + "/" + Abastecimento.getFullYear() ;
-     var hora = Abastecimento.getHours() + ":" + Abastecimento.getMinutes();
+     var hora = Abastecimento.getHours() + ":" + Abastecimento.getMinutes() + ":" + Abastecimento.getSeconds();
 
       novo = {
          dataFinal:data, horaFinal:hora
@@ -307,7 +307,7 @@ return{
     inseriManutencaoLocal: function(){
      var Manutencao = new Date();
      var data = Manutencao.getDate() + "/" + Manutencao.getMonth() + "/" + Manutencao.getFullYear() ;
-     var hora = Manutencao.getHours() + ":" + Manutencao.getMinutes();
+     var hora = Manutencao.getHours() + ":" + Manutencao.getMinutes() + ":" + Manutencao.getSeconds();
 
       novo = {
         dataInicio:data, horaInicio:hora
@@ -333,7 +333,7 @@ return{
     finalizaManutencaoLocal: function(){
      var Manutencao = new Date();
      var data = Manutencao.getDate() + "/" + Manutencao.getMonth() + "/" + Manutencao.getFullYear() ;
-     var hora = Manutencao.getHours() + ":" + Manutencao.getMinutes();
+     var hora = Manutencao.getHours() + ":" + Manutencao.getMinutes() + ":" + Manutencao.getSeconds();
 
      novo = {
          dataFinal:data, horaFinal:hora
@@ -370,7 +370,7 @@ return{
     inseriClienteLocal: function(){
      var Cliente = new Date();
      var data = Cliente.getDate() + "/" + Cliente.getMonth() + "/" + Cliente.getFullYear() ;
-     var hora = Cliente.getHours() + ":" + Cliente.getMinutes();
+     var hora = Cliente.getHours() + ":" + Cliente.getMinutes() + ":" + Cliente.getSeconds();
 
       novo = {
         dataInicio:data, horaInicio:hora
@@ -396,7 +396,7 @@ return{
     finalizaClienteLocal: function(){
      var Cliente = new Date();
      var data = Cliente.getDate() + "/" + Cliente.getMonth() + "/" + Cliente.getFullYear() ;
-     var hora = Cliente.getHours() + ":" + Cliente.getMinutes();
+     var hora = Cliente.getHours() + ":" + Cliente.getMinutes() + ":" + Cliente.getSeconds();
 
      novo = {
          dataFinal:data, horaFinal:hora
@@ -435,7 +435,7 @@ return{
 
     var Carga = new Date();
     var data = Carga.getDate() + "/" + Carga.getMonth() + "/" + Carga.getFullYear() ;
-    var hora = Carga.getHours() + ":" + Carga.getMinutes();
+    var hora = Carga.getHours() + ":" + Carga.getMinutes() + ":" + Carga.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
@@ -462,7 +462,7 @@ return{
    finalizaCargaLocal: function(){
     var Carga = new Date();
     var data = Carga.getDate() + "/" + Carga.getMonth() + "/" + Carga.getFullYear() ;
-    var hora = Carga.getHours() + ":" + Carga.getMinutes();
+    var hora = Carga.getHours() + ":" + Carga.getMinutes() + ":" + Carga.getSeconds();
 
       novo = {
        dataFinal:data, horaFinal:hora
@@ -504,7 +504,7 @@ return{
 
     var Descarga = new Date();
     var data = Descarga.getDate() + "/" + Descarga.getMonth() + "/" + Descarga.getFullYear() ;
-    var hora = Descarga.getHours() + ":" + Descarga.getMinutes();
+    var hora = Descarga.getHours() + ":" + Descarga.getMinutes() + ":" + Descarga.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
@@ -531,7 +531,7 @@ return{
    finalizaDescargaLocal: function(){
     var Descarga = new Date();
     var data = Descarga.getDate() + "/" + Descarga.getMonth() + "/" + Descarga.getFullYear() ;
-    var hora = Descarga.getHours() + ":" + Descarga.getMinutes();
+    var hora = Descarga.getHours() + ":" + Descarga.getMinutes() + ":" + Descarga.getSeconds();
 
       novo = {
        dataFinal:data, horaFinal:hora
@@ -571,7 +571,7 @@ return{
 
     var Alimentação = new Date();
     var data = Alimentação.getDate() + "/" + Alimentação.getMonth() + "/" + Alimentação.getFullYear() ;
-    var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes();
+    var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes() + ":" + Alimentação.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
@@ -599,7 +599,7 @@ return{
   
     var Alimentação = new Date();
     var data = Alimentação.getDate() + "/" + Alimentação.getMonth() + "/" + Alimentação.getFullYear() ;
-    var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes();
+    var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes() + ":" + Alimentação.getSeconds();
 
        novo = {
        dataFinal:data, horaFinal:hora
@@ -639,7 +639,7 @@ return{
 
     var Descanso = new Date();
     var data = Descanso.getDate() + "/" + Descanso.getMonth() + "/" + Descanso.getFullYear() ;
-    var hora = Descanso.getHours() + ":" + Descanso.getMinutes();
+    var hora = Descanso.getHours() + ":" + Descanso.getMinutes() + ":" + Descanso.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
@@ -666,7 +666,7 @@ return{
    finalizaDescansoLocal: function(){
     var Descanso = new Date();
     var data = Descanso.getDate() + "/" + Descanso.getMonth() + "/" + Descanso.getFullYear() ;
-    var hora = Descanso.getHours() + ":" + Descanso.getMinutes();
+    var hora = Descanso.getHours() + ":" + Descanso.getMinutes() + ":" + Descanso.getSeconds();
 
       novo = {
        dataFinal:data, horaFinal:hora
@@ -705,7 +705,7 @@ return{
 
     var Pernoite = new Date();
     var data = Pernoite.getDate() + "/" + Pernoite.getMonth() + "/" + Pernoite.getFullYear() ;
-    var hora = Pernoite.getHours() + ":" + Pernoite.getMinutes();
+    var hora = Pernoite.getHours() + ":" + Pernoite.getMinutes() + ":" + Pernoite.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
@@ -732,7 +732,7 @@ return{
    finalizaPernoiteLocal: function(){
     var Pernoite = new Date();
     var data = Pernoite.getDate() + "/" + Pernoite.getMonth() + "/" + Pernoite.getFullYear() ;
-    var hora = Pernoite.getHours() + ":" + Pernoite.getMinutes();
+    var hora = Pernoite.getHours() + ":" + Pernoite.getMinutes() + ":" + Pernoite.getSeconds();
 
       novo = {
        dataFinal:data, horaFinal:hora

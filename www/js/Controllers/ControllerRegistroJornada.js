@@ -9,7 +9,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 	  	 	swal({
 		 		  title: "Deseja Iniciar Expedição?",
 		 		  showCancelButton: true,
-		 		  confirmButtonColor: "#DD6B55",
+		 		  confirmButtonColor: "#000080",
 		 		  confirmButtonText: "Yes",
 		 		  cancelButtonText: "No",
 		 		  closeOnConfirm: false,
@@ -605,6 +605,20 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
  	};
  	
+
+ 	// controller das minhas jornadas ( consulta jornadas)
+
+ 	   $scope.consultaJornadas = function(){
+          $scope.expedientes = HttpService.getExpedicaoLocal();
+          $scope.direcoes = HttpService.getDirecaoLocal();
+
+  };
+
+
+ 	
+
+
+
  	
  	
 

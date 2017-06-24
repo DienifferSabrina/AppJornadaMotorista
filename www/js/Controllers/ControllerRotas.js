@@ -76,6 +76,7 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
                         var retorno = HttpService.InseriMapaLocal(rota);
                       if(retorno == true)
                       swal("Rota salvo com Sucesso!");
+
                     } else {
                       swal("Rota Cancelada");
                     };
@@ -83,10 +84,18 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
                 };
               };
 
+              
+
             // consulta mapas
-          var consultaRota = function(){
-          return HttpService.getMapasLocal();
-          };
+
+          $scope.consultaRotas= function(){
+        
+            $scope.rotas = HttpService.getMapasLocal();
+             console.log($scope.rotas);
+         };
+
+   
+  
 
    
 });

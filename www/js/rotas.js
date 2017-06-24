@@ -79,5 +79,15 @@ angular.module('starter').config(function($stateProvider,$urlRouterProvider){
 		}
 	})
 
+	.state('menu.listaJornada',{
+		url: '/listaJornada',
+		views:{
+			'menuConteudo':{
+				templateUrl: 'templates/listaJornada.html',
+				controller: 'ControllerRegistroJornada'
+			}
+		}
+	})
+
 	$urlRouterProvider.otherwise('/index');
 });
