@@ -90,8 +90,8 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
 
           $scope.consultaRotas= function(){
         
-            $scope.rotas = HttpService.getMapasLocal();
-             console.log($scope.rotas);
+            $scope.rota = HttpService.getMapasLocal();
+             console.log($scope.rota);
          };
 
        

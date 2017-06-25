@@ -608,36 +608,72 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
  	// controller das minhas jornadas ( consulta jornadas)
 
  	   $scope.consultaJornadas = function(){
-          $scope.expedientes = HttpService.getExpedicaoLocal();
-          $scope.direcoes = HttpService.getDirecaoLocal();
-          $scope.fiscalizacoes = HttpService.getFiscalizacaoLocal();
-          $scope.abastecimentos = HttpService.getAbastecimentoLocal();
-          $scope.manutencoes = HttpService.getManutencaoLocal();
-          $scope.clientes = HttpService.getClienteLocal();
-          $scope.cargas = HttpService.getCargaLocal();
-          $scope.descargas = HttpService.getDescargaLocal();
-          $scope.alimentacoes = HttpService.getAliementacaoLocal();
-          $scope.descansos = HttpService.getDescansoLocal();
-          $scope.pernoites = HttpService.getPernoiteLocal();
+          $scope.expediente = HttpService.getExpedicaoLocal();
+          $scope.expediente = HttpService.getExpedicaoLocal();
+		  $scope.direcao = HttpService.getDirecaoLocal();
+		  $scope.fiscalizacao = HttpService.getFiscalizacaoLocal();
+		  $scope.abastecimento = HttpService.getAbastecimentoLocal();
+		  $scope.manutencao = HttpService.getManutencaoLocal();
+		  $scope.cliente = HttpService.getClienteLocal();
+		  $scope.carga = HttpService.getCargaLocal();
+		  $scope.descarga = HttpService.getDescargaLocal();
+		  $scope.alimentacao = HttpService.getAliementacaoLocal();
+		  $scope.descanso = HttpService.getDescansoLocal();
+		  $scope.pernoite = HttpService.getPernoiteLocal();
   };
 
 
+  $scope.consultaDados = function(){
+
+  	  $scope.rota = HttpService.getMapasLocal();
+  	  $scope.expediente = HttpService.getExpedicaoLocal();
+	  $scope.direcao = HttpService.getDirecaoLocal();
+	  $scope.fiscalizacao = HttpService.getFiscalizacaoLocal();
+	  $scope.abastecimento = HttpService.getAbastecimentoLocal();
+	  $scope.manutencao = HttpService.getManutencaoLocal();
+	  $scope.cliente = HttpService.getClienteLocal();
+	  $scope.carga = HttpService.getCargaLocal();
+	  $scope.descarga = HttpService.getDescargaLocal();
+	  $scope.alimentacao = HttpService.getAliementacaoLocal();
+	  $scope.descanso = HttpService.getDescansoLocal();
+	  $scope.pernoite = HttpService.getPernoiteLocal();
+
+  };
   
   $scope.insere = function(){
-  	
-      var retorno = confirm("Deseja  sincronizar? Voce perderar todos seus dados locais!");
-      if (retorno == true){
-      HttpService.insereRotas($scope.rota).then(function(response) { $scope.rota = response; });
-
-      setTimeout(function() {
-      for (var i = 0 in $scope.expedicao){
-      HttpService.insereExpedicao($scope.expedicao[i]).then(function(response) { $scope.expedicao = response; }); }}, 1000);
-     
-      
-
-      setTimeout(function() { localStorage.clear();}, 3000);
-    }
+	  	 	swal({
+		 		  title: "Deseja sincronizar dados?",
+		 		  text: "Você perderá todos os seus dados locais após a sincronização",
+  				  type: "Aviso",
+		 		  showCancelButton: true,
+		 		  confirmButtonColor: "#000080",
+		 		  confirmButtonText: "Yes",
+		 		  cancelButtonText: "No",
+		 		  closeOnConfirm: false,
+		 		  closeOnCancel: false
+		 		},
+		 		function(isConfirm){
+		 		  if (isConfirm) {
+		 		  		console.log($scope.rota);
+				  		setTimeout(function() {
+      					for (var i = 0 in $scope.rota){
+      						HttpService.insereRotas($scope.rota[i]).then(function(response) { $scope.rota = response; }); }}, 1000);
+				    swal("Sincronização com Sucesso!");
+				  } else {
+				    swal("Sincronização Cancelada");
+				  };
+				});
+	  	
+	  
+   
  };
+
+
+
+
+	 
+		
+
 
 
 

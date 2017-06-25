@@ -790,8 +790,8 @@ return{
      return $http.post('http://localhost:3000/insere/rota', uga)
        .then(function(response) {
          // In the response, resp.data contains the result. Check the console to see all of the data returned.
-         console.log('Inseriu Mapa', response);
-
+        // console.log('Inseriu Mapa', response);
+        console.log(uga);
          return response.data;
       });
      },
