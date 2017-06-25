@@ -622,12 +622,22 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
   };
 
 
+  
+  $scope.insere = function(){
+  	
+      var retorno = confirm("Deseja  sincronizar? Voce perderar todos seus dados locais!");
+      if (retorno == true){
+      HttpService.insereRotas($scope.rota).then(function(response) { $scope.rota = response; });
 
+      setTimeout(function() {
+      for (var i = 0 in $scope.expedicao){
+      HttpService.insereExpedicao($scope.expedicao[i]).then(function(response) { $scope.expedicao = response; }); }}, 1000);
+     
+      
 
-
-
-
-
+      setTimeout(function() { localStorage.clear();}, 3000);
+    }
+ };
 
 
 

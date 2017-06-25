@@ -89,5 +89,24 @@ angular.module('starter').config(function($stateProvider,$urlRouterProvider){
 		}
 	})
 
+	.state('menu.sincronizar',{
+		url: '/sincronizar',
+		views:{
+			'menuConteudo':{
+				templateUrl: 'templates/sincronizar.html',
+				controller: 'ControllerRegistroJornada'
+			}
+		}
+	})
+
+	.state('menu.logout',{
+		url: '/logout',
+		views:{
+			'menuConteudo':{
+				templateUrl: 'templates/menu.html'
+			}
+		}
+	})
+
 	$urlRouterProvider.otherwise('/index');
 });

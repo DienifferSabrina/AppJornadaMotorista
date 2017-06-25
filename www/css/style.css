@@ -313,6 +313,22 @@ width: 92%;
 }
 
 
+.sincronizar{
+    text-align: center;
+    margin-top: 15%;
+    color: #fff;
+
+}
+.sincronizar img {
+
+    font-size: 50px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: 120px;
+    
+}
+
 
 
 

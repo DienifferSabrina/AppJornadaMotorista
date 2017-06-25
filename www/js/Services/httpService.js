@@ -781,8 +781,143 @@ return{
    },
 
 
+   // Parte de Sincronização
 
 
+
+  insereRotas: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/rota', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Mapa', response);
+
+         return response.data;
+      });
+     },
+
+      insereExpedicao: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/expedicao', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Expedição', response);
+
+         return response.data;
+      });
+     },
+
+     insereFiscalizacao: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/fiscalizacao', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Fiscalização', response);
+
+         return response.data;
+      });
+     },
+
+     insereDirecao: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/direcao', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Direcao', response);
+
+         return response.data;
+      });
+     },
+
+      insereAbastecimento: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/abastecimento', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Abastecimento', response);
+
+         return response.data;
+      });
+     },
+    
+     insereManutencao: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/manutencao', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Manutencao', response);
+
+         return response.data;
+      });
+     },
+
+       insereCliente: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/cliente', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Cliente', response);
+
+         return response.data;
+      });
+     },
+
+     insereCarga: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/carga', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Carga', response);
+
+         return response.data;
+      });
+     },
+
+     insereDescarga: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/descarga', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Descarga', response);
+
+         return response.data;
+      });
+     },
+    
+      insereAlimentacao: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/alimentacao', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Descanso', response);
+
+         return response.data;
+      });
+     },
+    
+     insereDescanso: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/descanso', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Descanso', response);
+
+         return response.data;
+      });
+     },
+      
+    
+   
+     inserePernoite: function(uga) {
+     // $http returns a promise, which has a then function, which also returns a promise.
+     return $http.post('http://localhost:3000/insere/pernoite', uga)
+       .then(function(response) {
+         // In the response, resp.data contains the result. Check the console to see all of the data returned.
+         console.log('Inseriu Pernoite', response);
+
+         return response.data;
+      });
+     }
 
 
 
