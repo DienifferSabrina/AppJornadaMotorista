@@ -94,10 +94,7 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
              console.log($scope.rotas);
          };
 
-         $scope.deletaRotaLocal = function($rota){
-          
-         }
-   
+       
   
 
    
