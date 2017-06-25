@@ -212,11 +212,13 @@ return{
 
       // guarda a fiscalização
        var fiscalizacao = [ ];
-       // verifica se a chave existe
-       if (typeof localStorage.fiscalizacao != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           fiscalizacao = JSON.parse(localStorage.fiscalizacao);
-       }
+
+        //pega inicio de uma atividade
+       fiscalizacaoAntiga = JSON.parse(localStorage.getItem('fiscalizacao'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,fiscalizacaoAntiga[0]);
+      
        // adiciona produto novo no vetor
       fiscalizacao.push(novo);
       // converte JSON para String
@@ -279,11 +281,13 @@ return{
 
        // guarda os produtos
        var abastecimento = [ ];
-       // verifica se a chave existe
-       if (typeof localStorage.abastecimento != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           abastecimento = JSON.parse(localStorage.abastecimento);
-       }
+     
+        //pega inicio de uma atividade
+       abastecimentoAntiga = JSON.parse(localStorage.getItem('abastecimento'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,abastecimentoAntiga[0]);
+      
        // adiciona produto novo no vetor
       abastecimento.push(novo);
       // converte JSON para String
@@ -344,11 +348,11 @@ return{
      };
        // guarda os produtos
        var manutencao = [ ];
-       // verifica se a chave existe
-       if (typeof localStorage.manutencao != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           manutencao = JSON.parse(localStorage.manutencao);
-       }
+        //pega inicio de uma atividade
+       manutencaoAntiga = JSON.parse(localStorage.getItem('manutencao'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,manutencaoAntiga[0]);
        // adiciona produto novo no vetor
       manutencao.push(novo);
       // converte JSON para String
@@ -408,11 +412,12 @@ return{
 
        // guarda os produtos
        var cliente = [ ];
-       // verifica se a chave existe
-       if (typeof localStorage.cliente != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           cliente = JSON.parse(localStorage.cliente);
-       }
+      //pega inicio de uma atividade
+       clienteAntiga = JSON.parse(localStorage.getItem('cliente'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,clienteAntiga[0]);
+
        // adiciona produto novo no vetor
       cliente.push(novo);
       // converte JSON para String
@@ -474,11 +479,13 @@ return{
 
        // guarda os produtos
        var carga = [ ];
-       // verifica se a chave existe
-       if (typeof localStorage.carga != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           carga = JSON.parse(localStorage.carga);
-       }
+      
+        //pega inicio de uma atividade
+       cargaAntiga = JSON.parse(localStorage.getItem('carga'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,cargaAntiga[0]);
+
        // adiciona produto novo no vetor
       carga.push(novo);
       // converte JSON para String
@@ -542,11 +549,12 @@ return{
      };
 
       var descarga = [ ];
-      // verifica se a chave existe
-      if (typeof localStorage.descarga != 'undefined'){
-          // recupera conteúdo da chave e transforma em JSON
-          descarga = JSON.parse(localStorage.descarga);
-      }
+      //pega inicio de uma atividade
+       descargaAntiga = JSON.parse(localStorage.getItem('descarga'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,descargaAntiga[0]);
+
       // adiciona produto novo no vetor
      descarga.push(novo);
      // converte JSON para String
@@ -573,27 +581,27 @@ return{
    // alimentação
      inseriAlimentacaoLocal: function() {
 
-    var Alimentação = new Date();
-    var data = Alimentação.getDate() + "/" + Alimentação.getMonth() + "/" + Alimentação.getFullYear() ;
-    var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes() + ":" + Alimentação.getSeconds();
+    var Alimentacao = new Date();
+    var data = Alimentacao.getDate() + "/" + Alimentacao.getMonth() + "/" + Alimentacao.getFullYear() ;
+    var hora = Alimentacao.getHours() + ":" + Alimentacao.getMinutes() + ":" + Alimentacao.getSeconds();
 
      novo = {
       dataInicio:data, horaInicio:hora
     };
 
 
-      var alimentação = [ ];
+      var alimentacao = [ ];
       // verifica se a chave existe
-      if (typeof localStorage.alimentação != 'undefined'){
+      if (typeof localStorage.alimentacao != 'undefined'){
           // recupera conteúdo da chave e transforma em JSON
-          alimentação = JSON.parse(localStorage.alimentação);
+          alimentacao = JSON.parse(localStorage.alimentacao);
       }
       // adiciona produto novo no vetor
-     alimentação.push(novo);
+     alimentacao.push(novo);
      // converte JSON para String
-      var paraString = JSON.stringify(alimentação);
+      var paraString = JSON.stringify(alimentacao);
       // armazena conteúdo do vetor em localStorate
-      localStorage.setItem('alimentação', paraString);
+      localStorage.setItem('alimentacao', paraString);
 
       return true;
 
@@ -601,9 +609,9 @@ return{
 
    finalizaAlimentacaoLocal: function(){
 
-    var Alimentação = new Date();
-    var data = Alimentação.getDate() + "/" + Alimentação.getMonth() + "/" + Alimentação.getFullYear() ;
-    var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes() + ":" + Alimentação.getSeconds();
+    var Alimentacao = new Date();
+    var data = Alimentacao.getDate() + "/" + Alimentacao.getMonth() + "/" + Alimentacao.getFullYear() ;
+    var hora = Alimentacao.getHours() + ":" + Alimentacao.getMinutes() + ":" + Alimentacao.getSeconds();
 
        novo = {
        dataFinal:data, horaFinal:hora
@@ -611,18 +619,19 @@ return{
 
 
 
-      var alimentação = [ ];
-      // verifica se a chave existe
-      if (typeof localStorage.alimentação != 'undefined'){
-          // recupera conteúdo da chave e transforma em JSON
-          alimentação = JSON.parse(localStorage.alimentação);
-      }
+      var alimentacao = [ ];
+      //pega inicio de uma atividade
+       alimentacaoAntiga = JSON.parse(localStorage.getItem('alimentacao'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,alimentacaoAntiga[0]);
+
       // adiciona produto novo no vetor
-     alimentação.push(novo);
+     alimentacao.push(novo);
      // converte JSON para String
-      var paraString = JSON.stringify(alimentação);
+      var paraString = JSON.stringify(alimentacao);
       // armazena conteúdo do vetor em localStorate
-      localStorage.setItem('alimentação', paraString);
+      localStorage.setItem('alimentacao', paraString);
 
       return true;
 
@@ -630,10 +639,10 @@ return{
 
     getAliementacaoLocal: function() {
      // retorna conteúdo da chave
-     if(typeof localStorage.alimentação == 'undefined')
+     if(typeof localStorage.alimentacao == 'undefined')
        return false;
      else
-     return JSON.parse(localStorage.alimentação);
+     return JSON.parse(localStorage.alimentacao);
    },
 
  // -------------------------------------------------- //
@@ -677,11 +686,12 @@ return{
      };
 
     var descanso = [ ];
-      // verifica se a chave existe
-      if (typeof localStorage.descanso != 'undefined'){
-          // recupera conteúdo da chave e transforma em JSON
-          descanso = JSON.parse(localStorage.descanso);
-      }
+      //pega inicio de uma atividade
+       descansoAntiga = JSON.parse(localStorage.getItem('descanso'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,descansoAntiga[0]);
+
       // adiciona produto novo no vetor
      descanso.push(novo);
      // converte JSON para String
@@ -743,11 +753,12 @@ return{
      };
 
      var pernoite = [ ];
-      // verifica se a chave existe
-      if (typeof localStorage.pernoite != 'undefined'){
-          // recupera conteúdo da chave e transforma em JSON
-          pernoite = JSON.parse(localStorage.pernoite);
-      }
+      //pega inicio de uma atividade
+       pernoiteAntiga = JSON.parse(localStorage.getItem('pernoite'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,pernoiteAntiga[0]);
+
       // adiciona produto novo no vetor
      pernoite.push(novo);
      // converte JSON para String

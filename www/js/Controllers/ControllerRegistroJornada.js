@@ -34,7 +34,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 			swal({
 				title: "Deseja Encerrar a Expedição?",
 				showCancelButton: true,
-				confirmButtonColor: "#DD6B55",
+				confirmButtonColor: "#000080",
 				confirmButtonText: "Yes",
 				cancelButtonText: "No",
 				closeOnConfirm: false,
@@ -610,7 +610,15 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
  	   $scope.consultaJornadas = function(){
           $scope.expedientes = HttpService.getExpedicaoLocal();
           $scope.direcoes = HttpService.getDirecaoLocal();
-
+          $scope.fiscalizacoes = HttpService.getFiscalizacaoLocal();
+          $scope.abastecimentos = HttpService.getAbastecimentoLocal();
+          $scope.manutencoes = HttpService.getManutencaoLocal();
+          $scope.clientes = HttpService.getClienteLocal();
+          $scope.cargas = HttpService.getCargaLocal();
+          $scope.descargas = HttpService.getDescargaLocal();
+          $scope.alimentacoes = HttpService.getAliementacaoLocal();
+          $scope.descansos = HttpService.getDescansoLocal();
+          $scope.pernoites = HttpService.getPernoiteLocal();
   };
 
 

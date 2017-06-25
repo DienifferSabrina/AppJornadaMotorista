@@ -5,29 +5,114 @@
       <!-- Botão para chamar a tela  -->
       <ion-content>
         <ion-list>
-          <ion-item can-swipe="swipe" ng-repeat="expediente in expedientes">
+          <ion-item ng-repeat="expediente in expedientes">
            <h2> Expediente </h2>
            <h3> <li> Data Inicial: {{expediente.dataInicio}} </li> </h3>
            <h3> <li> Hora Inicial: {{expediente.horaInicio}} </li> </h3>
            <h3> <li> Data Final: {{expediente.dataFinal}} </li> </h3>
            <h3> <li> Hora Hora: {{expediente.horaFinal}} </li> </h3>
-           <ion-option-button class="button-assertive">
-              remove
-           </ion-option-button>
           </ion-item>
         </ion-list>
 
          <ion-list>
-          <ion-item can-swipe="swipe" ng-repeat="direcao in direcoes">
+          <ion-item  ng-repeat="direcao in direcoes">
            <h2> Direção </h2>
            <h3> <li> Data Inicial: {{direcao.dataInicio}} </li> </h3>
            <h3> <li> Hora Inicial: {{direcao.horaInicio}} </li> </h3>
            <h3> <li> Data Final: {{direcao.dataFinal}} </li> </h3>
            <h3> <li> Hora Hora: {{direcao.horaFinal}} </li> </h3>
-           <ion-option-button class="button-assertive">
-              remove
-           </ion-option-button>
           </ion-item>
         </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="fiscalizacao in fiscalizacoes">
+           <h2> Fiscalização </h2>
+           <h3> <li> Data Inicial: {{fiscalizacao.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{fiscalizacao.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{fiscalizacao.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{fiscalizacao.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="abastecimento in abastecimentos">
+           <h2> Abastecimento </h2>
+           <h3> <li> Data Inicial: {{abastecimento.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{abastecimento.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{abastecimento.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{abastecimento.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="mantencao in manutencoes">
+           <h2> Manutenção </h2>
+           <h3> <li> Data Inicial: {{mantencao.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{mantencao.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{mantencao.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{mantencao.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="cliente in clientes">
+           <h2> Cliente </h2>
+           <h3> <li> Data Inicial: {{cliente.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{cliente.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{cliente.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{cliente.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="carga in cargas">
+           <h2> Carga </h2>
+           <h3> <li> Data Inicial: {{carga.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{carga.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{carga.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{carga.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="descarga in descargas">
+           <h2> Descarga </h2>
+           <h3> <li> Data Inicial: {{descarga.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{descarga.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{descarga.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{descarga.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="alimentacao in alimentacoes">
+           <h2> Alimentação </h2>
+           <h3> <li> Data Inicial: {{alimentacao.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{alimentacao.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{alimentacao.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{alimentacao.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="descanso in descansos">
+           <h2> Descanso </h2>
+           <h3> <li> Data Inicial: {{descanso.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{descanso.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{descanso.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{descanso.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item  ng-repeat="pernoite in pernoites">
+           <h2> Pernoite </h2>
+           <h3> <li> Data Inicial: {{pernoite.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{pernoite.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{pernoite.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{pernoite.horaFinal}} </li> </h3>
+          </ion-item>
+        </ion-list>
+
       </ion-content>
 </ion-view>
