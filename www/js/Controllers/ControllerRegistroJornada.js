@@ -105,13 +105,13 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 	  	}
 	  };
 
-	
+
 	  // consulta direcao
 	  var consultaDirecaoLocal = function(){
     	return HttpService.getDirecaoLocal();
 
  	};
- 	
+
  	// Inicio e Fim Fiscalização
 	  $scope.inseriFiscalizacaoLocal = function(){
 
@@ -160,7 +160,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 	  	}
 	  };
 
-	
+
 	  // consulta fiscalizacao
 	  var consultaFiscalizacaoLocal = function(){
     	return HttpService.getFiscalizacaoLocal();
@@ -271,7 +271,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta manutenção
 	  var consultaManutencaoLocal = function(){
     	return HttpService.getManutencaoLocal();
@@ -326,7 +326,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta cliente
 	  var consultaClienteLocal = function(){
     	return HttpService.getClienteLocal();
@@ -381,7 +381,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta carga
 	  var consultaCargaLocal = function(){
     	return HttpService.getCargaLocal();
@@ -436,13 +436,13 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta descarga
 	  var consultaDescargaLocal = function(){
     	return HttpService.getDescargaLocal();
 
  	};
- 	
+
  	// inicio e fim alimentação
  	$scope.inseriAlimentacaoLocal = function(){
 
@@ -490,13 +490,13 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta aliemntação
 	  var consultaAlimentacaoLocal = function(){
     	return HttpService.getAliementacaoLocal();
 
  	};
- 	
+
  	// inicio e fim descanso
  	$scope.inseriDescansoLocal = function(){
 
@@ -544,13 +544,13 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta descanso
 	  var consultaDescansoLocal = function(){
     	return HttpService.getDescansoLocal();
 
  	};
- 	
+
  	// inicio e fim pernoite
  	$scope.inseriPernoiteLocal = function(){
 
@@ -598,32 +598,33 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
 	  	}
 	  };
-	  
+
 	  // consulta descarga
 	  var consultaPernoiteLocal = function(){
     	return HttpService.getPernoiteLocal();
 
  	};
- 	
+
 
  	// controller das minhas jornadas ( consulta jornadas)
 
  	   $scope.consultaJornadas = function(){
           $scope.expedientes = HttpService.getExpedicaoLocal();
+					console.log($scope.expedientes);
           $scope.direcoes = HttpService.getDirecaoLocal();
 
   };
 
 
- 	
 
 
 
- 	
- 	
 
-	
-	
+
+
+
+
+
 
 
 });

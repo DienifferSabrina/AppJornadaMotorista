@@ -39,7 +39,7 @@ return{
     var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes() + ":" + Expedicao.getSeconds();
 
      novo = {
-      dataInicio:data, horaInicio:hora
+      dataInicio:data, horaInicio:hora, dataFinal:null, horaFinal:null
     };
 
       // guarda os produtos
@@ -71,11 +71,9 @@ return{
 
        // guarda os produtos
        var expedicao = [ ];
+
        // verifica se a chave existe
-       if (typeof localStorage.expedicao != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           expedicao = JSON.parse(localStorage.expedicao);
-       }
+
        // adiciona produto novo no vetor
       expedicao.push(novo);
       // converte JSON para String
@@ -510,7 +508,7 @@ return{
       dataInicio:data, horaInicio:hora
     };
 
-    
+
       var descarga = [ ];
       // verifica se a chave existe
       if (typeof localStorage.descarga != 'undefined'){
@@ -554,7 +552,7 @@ return{
 
    },
 
-   
+
 
     getDescargaLocal: function() {
      // retorna conteúdo da chave
@@ -577,7 +575,7 @@ return{
       dataInicio:data, horaInicio:hora
     };
 
-    
+
       var alimentação = [ ];
       // verifica se a chave existe
       if (typeof localStorage.alimentação != 'undefined'){
@@ -596,7 +594,7 @@ return{
    },
 
    finalizaAlimentacaoLocal: function(){
-  
+
     var Alimentação = new Date();
     var data = Alimentação.getDate() + "/" + Alimentação.getMonth() + "/" + Alimentação.getFullYear() ;
     var hora = Alimentação.getHours() + ":" + Alimentação.getMinutes() + ":" + Alimentação.getSeconds();
@@ -606,7 +604,7 @@ return{
      };
 
 
-    
+
       var alimentação = [ ];
       // verifica se a chave existe
       if (typeof localStorage.alimentação != 'undefined'){
@@ -645,7 +643,7 @@ return{
       dataInicio:data, horaInicio:hora
     };
 
-    
+
       var descanso = [ ];
       // verifica se a chave existe
       if (typeof localStorage.descanso != 'undefined'){
@@ -688,7 +686,7 @@ return{
       return true;
    },
 
-   
+
 
     getDescansoLocal: function() {
      // retorna conteúdo da chave
@@ -711,7 +709,7 @@ return{
       dataInicio:data, horaInicio:hora
     };
 
-    
+
       var pernoite = [ ];
       // verifica se a chave existe
       if (typeof localStorage.pernoite != 'undefined'){
@@ -755,7 +753,7 @@ return{
 
    },
 
-   
+
 
     getPernoiteLocal: function() {
      // retorna conteúdo da chave
@@ -772,7 +770,7 @@ return{
 
 
 
-   
+
 
 }
 });
