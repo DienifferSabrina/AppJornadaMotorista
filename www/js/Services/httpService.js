@@ -39,7 +39,7 @@ return{
     var hora = Expedicao.getHours() + ":" + Expedicao.getMinutes() + ":" + Expedicao.getSeconds();
 
      novo = {
-      dataInicio:data, horaInicio:hora, dataFinal:null, horaFinal:null
+      dataInicio:data, horaInicio:hora
     };
 
       // guarda os produtos
@@ -69,10 +69,14 @@ return{
        dataFinal:data, horaFinal:hora
      };
 
-       // guarda os produtos
+
        var expedicao = [ ];
 
-       // verifica se a chave existe
+       //pega inicio de uma atividade
+       expedicaoAntiga = JSON.parse(localStorage.getItem('expedicao'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,expedicaoAntiga[0]);
 
        // adiciona produto novo no vetor
       expedicao.push(novo);
@@ -138,10 +142,12 @@ return{
        // guarda os produtos
        var direcao = [ ];
        // verifica se a chave existe
-       if (typeof localStorage.direcao != 'undefined'){
-           // recupera conteúdo da chave e transforma em JSON
-           direcao = JSON.parse(localStorage.direcao);
-       }
+       //pega inicio de uma atividade
+       direcaoAntiga = JSON.parse(localStorage.getItem('direcao'));
+
+       //concatena os antigo com o final
+       angular.extend(novo,direcaoAntiga[0]);
+
        // adiciona produto novo no vetor
       direcao.push(novo);
       // converte JSON para String

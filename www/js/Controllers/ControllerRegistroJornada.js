@@ -30,7 +30,6 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		//finalizar expedicao
 		$scope.finalizaExpedicaoLocal = function(){
 			var retornoConsulta = consultaExpedicaoLocal();
-			console.log(retornoConsulta);
 			if (retornoConsulta.length == 1){
 			swal({
 				title: "Deseja Encerrar a Expedição?",
@@ -610,7 +609,6 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 
  	   $scope.consultaJornadas = function(){
           $scope.expedientes = HttpService.getExpedicaoLocal();
-					console.log($scope.expedientes);
           $scope.direcoes = HttpService.getDirecaoLocal();
 
   };

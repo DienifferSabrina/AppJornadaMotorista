@@ -8,12 +8,12 @@
 
 
         <ion-list>
-          <ion-item can-swipe="swipe">
+          <ion-item can-swipe="swipe" ng-repeat="expediente in expedientes">
            <h2> Expediente </h2>
-           <h3> <li> Data Inicial: {{expedientes[0].dataInicio}} </li> </h3>
-           <h3> <li> Hora Inicial: {{expedientes[0].horaInicio}} </li> </h3>
-           <h3> <li> Data Final: {{expedientes[1].dataFinal}} </li> </h3>
-           <h3> <li> Hora Hora: {{expedientes[1].horaFinal}} </li> </h3>
+           <h3> <li> Data Inicial: {{expediente.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{expediente.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{expediente.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{expediente.horaFinal}} </li> </h3>
            <ion-option-button class="button-assertive">
               remove
            </ion-option-button>
@@ -21,12 +21,12 @@
         </ion-list>
 
          <ion-list>
-          <ion-item can-swipe="swipe">
+          <ion-item can-swipe="swipe" ng-repeat="direcao in direcoes">
            <h2> Direção </h2>
-           <h3> <li> Data Inicial: {{direcoes[0].dataInicio}} </li> </h3>
-           <h3> <li> Hora Inicial: {{direcoes[0].horaInicio}} </li> </h3>
-           <h3> <li> Data Final: {{direcoes[1].dataFinal}} </li> </h3>
-           <h3> <li> Hora Hora: {{direcoes[1].horaFinal}} </li> </h3>
+           <h3> <li> Data Inicial: {{direcao.dataInicio}} </li> </h3>
+           <h3> <li> Hora Inicial: {{direcao.horaInicio}} </li> </h3>
+           <h3> <li> Data Final: {{direcao.dataFinal}} </li> </h3>
+           <h3> <li> Hora Hora: {{direcao.horaFinal}} </li> </h3>
            <ion-option-button class="button-assertive">
               remove
            </ion-option-button>
