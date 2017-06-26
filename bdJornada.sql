@@ -101,10 +101,10 @@ horaFinal		varchar(10)
 select * from tb_pernoite 
 
 create table tb_rotas (
-origem			varchar(30),
-destino			varchar(30),
-duracao			varchar(30),
-tempo			varchar(30)
+origem			varchar(80),
+destino			varchar(80),
+duracao			varchar(40),
+tempo			varchar(40)
 );
 
 
