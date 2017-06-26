@@ -622,57 +622,102 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		  $scope.pernoite = HttpService.getPernoiteLocal();
   };
 
-
-  $scope.consultaDados = function(){
-
-  	  $scope.rota = HttpService.getMapasLocal();
-  	  $scope.expediente = HttpService.getExpedicaoLocal();
-	  $scope.direcao = HttpService.getDirecaoLocal();
-	  $scope.fiscalizacao = HttpService.getFiscalizacaoLocal();
-	  $scope.abastecimento = HttpService.getAbastecimentoLocal();
-	  $scope.manutencao = HttpService.getManutencaoLocal();
-	  $scope.cliente = HttpService.getClienteLocal();
-	  $scope.carga = HttpService.getCargaLocal();
-	  $scope.descarga = HttpService.getDescargaLocal();
-	  $scope.alimentacao = HttpService.getAliementacaoLocal();
-	  $scope.descanso = HttpService.getDescansoLocal();
-	  $scope.pernoite = HttpService.getPernoiteLocal();
-
-  };
-  
   $scope.insere = function(){
-	  	 	swal({
-		 		  title: "Deseja sincronizar dados?",
-		 		  text: "Você perderá todos os seus dados locais após a sincronização",
-  				  type: "Aviso",
-		 		  showCancelButton: true,
-		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
-		 		  closeOnConfirm: false,
-		 		  closeOnCancel: false
-		 		},
-		 		function(isConfirm){
-		 		  if (isConfirm) {
-		 		  		console.log($scope.rota);
-				  		setTimeout(function() {
-      					for (var i = 0 in $scope.rota){
-      						HttpService.insereRotas($scope.rota[i]).then(function(response) { $scope.rota = response; }); }}, 1000);
-				    swal("Sincronização com Sucesso!");
-				  } else {
-				    swal("Sincronização Cancelada");
-				  };
-				});
-	  	
-	  
-   
+		var rota = HttpService.getMapasLocal();
+		var expediente = HttpService.getExpedicaoLocal();
+		var direcao = HttpService.getDirecaoLocal();
+		var fiscalizacao = HttpService.getFiscalizacaoLocal();
+		var abastecimento = HttpService.getAbastecimentoLocal();
+		var manutencao = HttpService.getManutencaoLocal();
+		var cliente = HttpService.getClienteLocal();
+		var carga = HttpService.getCargaLocal();
+		var descarga = HttpService.getDescargaLocal();
+		var alimentacao = HttpService.getAliementacaoLocal();
+		var descanso = HttpService.getDescansoLocal();
+		var pernoite = HttpService.getPernoiteLocal();
+		var cont = 0;
+
+		if(rota.lenght != 0){
+			for(cont in rota){
+				HttpService.insereRotas(rota[cont]);
+			}
+			cont = 0;
+		}
+		if(expediente.lenght != 0){
+			for(cont in expediente){
+				HttpService.insereExpedicao(expediente[cont]);
+			}
+			cont = 0;
+		}
+		if(direcao.lenght != 0){
+			for(cont in direcao){
+				HttpService.insereDirecao(direcao[cont]);
+			}
+			cont = 0;
+		}
+		if(fiscalizacao.lenght != 0){
+			for(cont in fiscalizacao){
+				HttpService.insereFiscalizacao(fiscalizacao[cont]);
+			}
+			cont = 0;
+		}
+		if(abastecimento.lenght != 0){
+			for(cont in abastecimento){
+				HttpService.insereAbastecimento(abastecimento[cont]);
+			}
+			cont = 0;
+		}
+		if(manutencao.lenght != 0){
+			for(cont in manutencao){
+				HttpService.insereManutencao(manutencao[cont]);
+			}
+			cont = 0;
+		}
+		if(cliente.lenght != 0){
+			for(cont in cliente){
+				HttpService.insereCliente(cliente[cont]);
+			}
+			cont = 0;
+		}
+		if(carga.lenght != 0){
+			for(cont in carga){
+				HttpService.insereCarga(carga[cont]);
+			}
+			cont = 0;
+		}
+		if(descarga.lenght != 0){
+			for(cont in descarga){
+				HttpService.insereDescarga(descarga[cont]);
+			}
+			cont = 0;
+		}
+		if(alimentacao.lenght != 0){
+			for(cont in alimentacao){
+				HttpService.insereAlimentacao(alimentacao[cont]);
+			}
+			cont = 0;
+		}
+		if(descanso.lenght != 0){
+			for(cont in descanso){
+				HttpService.insereDescanso(descanso[cont]);
+			}
+			cont = 0;
+		}
+		if(pernoite.lenght != 0){
+			for(cont in pernoite){
+				HttpService.inserePernoite(pernoite[cont]);
+			}
+			cont = 0;
+		}
+
+
  };
 
 
 
 
-	 
-		
+
+
 
 
 

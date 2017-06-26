@@ -218,7 +218,7 @@ return{
 
        //concatena os antigo com o final
        angular.extend(novo,fiscalizacaoAntiga[0]);
-      
+
        // adiciona produto novo no vetor
       fiscalizacao.push(novo);
       // converte JSON para String
@@ -281,13 +281,13 @@ return{
 
        // guarda os produtos
        var abastecimento = [ ];
-     
+
         //pega inicio de uma atividade
        abastecimentoAntiga = JSON.parse(localStorage.getItem('abastecimento'));
 
        //concatena os antigo com o final
        angular.extend(novo,abastecimentoAntiga[0]);
-      
+
        // adiciona produto novo no vetor
       abastecimento.push(novo);
       // converte JSON para String
@@ -479,7 +479,7 @@ return{
 
        // guarda os produtos
        var carga = [ ];
-      
+
         //pega inicio de uma atividade
        cargaAntiga = JSON.parse(localStorage.getItem('carga'));
 
@@ -787,7 +787,7 @@ return{
 
   insereRotas: function(uga) {
      // $http returns a promise, which has a then function, which also returns a promise.
-     return $http.post('http://localhost:3000/insere/rota', uga)
+     return $http.post('http://localhost:3000/insereRota', uga)
        .then(function(response) {
          // In the response, resp.data contains the result. Check the console to see all of the data returned.
         // console.log('Inseriu Mapa', response);
@@ -839,7 +839,7 @@ return{
          return response.data;
       });
      },
-    
+
      insereManutencao: function(uga) {
      // $http returns a promise, which has a then function, which also returns a promise.
      return $http.post('http://localhost:3000/insere/manutencao', uga)
@@ -883,7 +883,7 @@ return{
          return response.data;
       });
      },
-    
+
       insereAlimentacao: function(uga) {
      // $http returns a promise, which has a then function, which also returns a promise.
      return $http.post('http://localhost:3000/insere/alimentacao', uga)
@@ -894,7 +894,7 @@ return{
          return response.data;
       });
      },
-    
+
      insereDescanso: function(uga) {
      // $http returns a promise, which has a then function, which also returns a promise.
      return $http.post('http://localhost:3000/insere/descanso', uga)
@@ -905,9 +905,9 @@ return{
          return response.data;
       });
      },
-      
-    
-   
+
+
+
      inserePernoite: function(uga) {
      // $http returns a promise, which has a then function, which also returns a promise.
      return $http.post('http://localhost:3000/insere/pernoite', uga)
