@@ -66,8 +66,8 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
                     title: "Deseja Salvar Rota Pesquisada?",
                     showCancelButton: true,
                     confirmButtonColor: "#000080",
-                    confirmButtonText: "Yes",
-                    cancelButtonText: "No",
+                    confirmButtonText: "Sim",
+                    cancelButtonText: "Não",
                     closeOnConfirm: false,
                     closeOnCancel: false
                   },
@@ -75,7 +75,7 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
                     if (isConfirm) {
                         var retorno = HttpService.InseriMapaLocal(rota);
                       if(retorno == true)
-                      swal("Rota salvo com Sucesso!");
+                      swal("Rota salva com Sucesso!");
 
                     } else {
                       swal("Rota Cancelada");
@@ -95,9 +95,5 @@ angular.module('starter').controller('AppRotas', function($scope, HttpService) {
          };
 
        
-     
-
-  
-
    
 });

@@ -10,8 +10,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Expedição?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -35,8 +35,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 				title: "Deseja Encerrar a Expedição?",
 				showCancelButton: true,
 				confirmButtonColor: "#000080",
-				confirmButtonText: "Yes",
-				cancelButtonText: "No",
+				confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 				closeOnConfirm: false,
 				closeOnCancel: false
 			},
@@ -66,8 +66,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Direção?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -86,8 +86,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Direção?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -121,8 +121,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Fiscalização?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -141,8 +141,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Fiscalização?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -178,8 +178,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Abastecimento?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -198,8 +198,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Abastecimento?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -233,8 +233,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Manutenção?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -253,8 +253,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Manutenção?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -288,8 +288,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Cliente?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -308,8 +308,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Cliente?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -343,8 +343,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Carga?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -363,8 +363,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Carga?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -398,8 +398,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Descarga?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -418,8 +418,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Descarga?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		 confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -452,8 +452,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Alimentação?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -472,8 +472,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Alimentação?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -506,8 +506,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Descanso?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -526,8 +526,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Descanso?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -560,8 +560,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja Iniciar Pernoite?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -580,8 +580,8 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
 		 		  title: "Deseja finalizar Pernoite?",
 		 		  showCancelButton: true,
 		 		  confirmButtonColor: "#000080",
-		 		  confirmButtonText: "Yes",
-		 		  cancelButtonText: "No",
+		 		  confirmButtonText: "Sim",
+		 		  cancelButtonText: "Não",
 		 		  closeOnConfirm: false,
 		 		  closeOnCancel: false
 		 		},
@@ -608,6 +608,7 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
  	// controller das minhas jornadas ( consulta jornadas)
 
  	   $scope.consultaJornadas = function(){
+
           $scope.expediente = HttpService.getExpedicaoLocal();
           $scope.expediente = HttpService.getExpedicaoLocal();
 		  $scope.direcao = HttpService.getDirecaoLocal();
@@ -623,95 +624,124 @@ angular.module('starter').controller('ControllerRegistroJornada',function($scope
   };
 
   $scope.insere = function(){
-		var rota = HttpService.getMapasLocal();
-		var expediente = HttpService.getExpedicaoLocal();
-		var direcao = HttpService.getDirecaoLocal();
-		var fiscalizacao = HttpService.getFiscalizacaoLocal();
-		var abastecimento = HttpService.getAbastecimentoLocal();
-		var manutencao = HttpService.getManutencaoLocal();
-		var cliente = HttpService.getClienteLocal();
-		var carga = HttpService.getCargaLocal();
-		var descarga = HttpService.getDescargaLocal();
-		var alimentacao = HttpService.getAliementacaoLocal();
-		var descanso = HttpService.getDescansoLocal();
-		var pernoite = HttpService.getPernoiteLocal();
-		var cont = 0;
-
-		if(rota.lenght != 0){
-			for(cont in rota){
-				HttpService.insereRotas(rota[cont]);
-			}
-			cont = 0;
-		}
-		if(expediente.lenght != 0){
-			for(cont in expediente){
-				HttpService.insereExpedicao(expediente[cont]);
-			}
-			cont = 0;
-		}
-		if(direcao.lenght != 0){
-			for(cont in direcao){
-				HttpService.insereDirecao(direcao[cont]);
-			}
-			cont = 0;
-		}
-		if(fiscalizacao.lenght != 0){
-			for(cont in fiscalizacao){
-				HttpService.insereFiscalizacao(fiscalizacao[cont]);
-			}
-			cont = 0;
-		}
-		if(abastecimento.lenght != 0){
-			for(cont in abastecimento){
-				HttpService.insereAbastecimento(abastecimento[cont]);
-			}
-			cont = 0;
-		}
-		if(manutencao.lenght != 0){
-			for(cont in manutencao){
-				HttpService.insereManutencao(manutencao[cont]);
-			}
-			cont = 0;
-		}
-		if(cliente.lenght != 0){
-			for(cont in cliente){
-				HttpService.insereCliente(cliente[cont]);
-			}
-			cont = 0;
-		}
-		if(carga.lenght != 0){
-			for(cont in carga){
-				HttpService.insereCarga(carga[cont]);
-			}
-			cont = 0;
-		}
-		if(descarga.lenght != 0){
-			for(cont in descarga){
-				HttpService.insereDescarga(descarga[cont]);
-			}
-			cont = 0;
-		}
-		if(alimentacao.lenght != 0){
-			for(cont in alimentacao){
-				HttpService.insereAlimentacao(alimentacao[cont]);
-			}
-			cont = 0;
-		}
-		if(descanso.lenght != 0){
-			for(cont in descanso){
-				HttpService.insereDescanso(descanso[cont]);
-			}
-			cont = 0;
-		}
-		if(pernoite.lenght != 0){
-			for(cont in pernoite){
-				HttpService.inserePernoite(pernoite[cont]);
-			}
-			cont = 0;
-		}
 
 
- };
+  	swal({
+                    title: "Deseja Sincronizar dados?",
+                    showCancelButton: true,
+                    confirmButtonColor: "#000080",
+                    confirmButtonText: "Sim",
+                    cancelButtonText: "Não",
+                    closeOnConfirm: false,
+                    closeOnCancel: false
+                  },
+                  function(isConfirm){
+                    if (isConfirm) {
+		                    var rota = HttpService.getMapasLocal();
+							var expediente = HttpService.getExpedicaoLocal();
+							var direcao = HttpService.getDirecaoLocal();
+							var fiscalizacao = HttpService.getFiscalizacaoLocal();
+							var abastecimento = HttpService.getAbastecimentoLocal();
+							var manutencao = HttpService.getManutencaoLocal();
+							var cliente = HttpService.getClienteLocal();
+							var carga = HttpService.getCargaLocal();
+							var descarga = HttpService.getDescargaLocal();
+							var alimentacao = HttpService.getAliementacaoLocal();
+							var descanso = HttpService.getDescansoLocal();
+							var pernoite = HttpService.getPernoiteLocal();
+							var cont = 0;
+
+							if(rota.lenght != 0){
+								for(cont in rota){
+									HttpService.insereRotas(rota[cont]);
+								}
+								cont = 0;
+							}
+							if(expediente.lenght != 0){
+								for(cont in expediente){
+									HttpService.insereExpedicao(expediente[cont]);
+								}
+								cont = 0;
+							}
+							if(direcao.lenght != 0){
+								for(cont in direcao){
+									HttpService.insereDirecao(direcao[cont]);
+								}
+								cont = 0;
+							}
+							if(fiscalizacao.lenght != 0){
+								for(cont in fiscalizacao){
+									HttpService.insereFiscalizacao(fiscalizacao[cont]);
+								}
+								cont = 0;
+												}
+							if(abastecimento.lenght != 0){
+								for(cont in abastecimento){
+									HttpService.insereAbastecimento(abastecimento[cont]);
+								}
+								cont = 0;
+							}
+							if(manutencao.lenght != 0){
+								for(cont in manutencao){
+									HttpService.insereManutencao(manutencao[cont]);
+								}
+								cont = 0;
+							}
+							if(cliente.lenght != 0){
+								for(cont in cliente){
+									HttpService.insereCliente(cliente[cont]);
+								}
+								cont = 0;
+							}
+							if(carga.lenght != 0){
+								for(cont in carga){
+									HttpService.insereCarga(carga[cont]);
+								}
+								cont = 0;
+												}
+							if(descarga.lenght != 0){
+								for(cont in descarga){
+									HttpService.insereDescarga(descarga[cont]);
+								}
+								cont = 0;
+							}
+							if(alimentacao.lenght != 0){
+								for(cont in alimentacao){
+									HttpService.insereAlimentacao(alimentacao[cont]);
+								}
+								cont = 0;
+							}
+							if(descanso.lenght != 0){
+								for(cont in descanso){
+									HttpService.insereDescanso(descanso[cont]);
+								}
+								cont = 0;
+							}
+							if(pernoite.lenght != 0){
+								for(cont in pernoite){
+									HttpService.inserePernoite(pernoite[cont]);
+								}
+								cont = 0;
+							}
+
+							setTimeout(function() { localStorage.clear();}, 3000);
+
+                      
+                      swal("Sincronização concluida com Sucesso!");
+
+                    } else {
+                      swal("Sincronização Cancelada");
+                    };
+                  });
+
+              };
+
+
+		
+
+
+
+
 
 
 

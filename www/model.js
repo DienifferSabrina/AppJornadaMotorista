@@ -67,6 +67,30 @@ app.post('/insereRota', function (req, res) {
 	});
 	});
 
+	// direcao
+	app.post('/insere/direcao', function (req, res) {
+	pool.connect(function(err, client, done) {
+	  if(err) {
+		return console.error('error fetching client from pool', err);
+	  }
+	  client.query('insert into tb_direcao (datainicio, horainicio, datafinal, horafinal) values (' + '\'' + req.body.dataInicio + '\'' + ','
+	  																							+ '\'' + req.body.horaInicio + '\'' + ','
+	  																							+ '\'' + req.body.dataFinal + '\'' + ','
+	  																							+ '\'' + req.body.horaFinal + '\'' + ')', function(err, result) {
+		//call `done()` to release the client back to the pool
+		done();
+
+		if(err) {
+		  return console.error('error running query', err);
+		}
+
+		res.setHeader('Access-Control-Allow-Origin','*');
+		res.json(result.rows); // servidor retorna a consulta em formato json
+	  });
+	});
+	});
+
+
 	// fiscalização
 	app.post('/insere/fiscalizacao', function (req, res) {
 	pool.connect(function(err, client, done) {

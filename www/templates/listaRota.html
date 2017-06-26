@@ -6,11 +6,12 @@
       <ion-content>
       	
         <ion-list>
-          <ion-item can-swipe="swipe" ng-repeat="rota in rota">
+          <ion-item ng-repeat="rota in rota">
            <h3> <li> Origem: {{rota.origem[0]}} </li> </h3>
            <h3> <li> Destino: {{rota.destino[0]}} </li> </h3>
            <h3> <li> Duração: {{rota.duracao}} </li> </h3>
            <h3> <li> Tempo: {{rota.tempo}} </li>  </h3>  
+            
           </ion-item>
         </ion-list>
       </ion-content>  
